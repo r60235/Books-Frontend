@@ -2,12 +2,12 @@ import { useState } from "react";
 import useFetch from "../useFetch";
 
 const Books = () => {
-  const { data, loading, error } = useFetch("http://localhost:5003/books");
+  const { data, loading, error } = useFetch("https://books-backend.vercel.app/books");
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleDelete = async (bookId) => {
     try {
-      const response = await fetch(`http://localhost:5003/books/${bookId}`, {
+      const response = await fetch(`https://books-backend.vercel.app/books/${bookId}`, {
         method: "DELETE",
       });
 

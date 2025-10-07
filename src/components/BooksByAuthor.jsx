@@ -2,7 +2,7 @@ import useFetch from "../useFetch";
 
 const BooksByAuthor = ({ author }) => {
   const { data, loading, error } = useFetch(
-    `http://localhost:5003/books/author/${author}`
+    `https://books-backend.vercel.app/books/author/${author}`
   );
 
   if (loading) return <p>Loading...</p>;
